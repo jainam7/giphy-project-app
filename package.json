@@ -1,16 +1,22 @@
 {
   "name": "giphy-project-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.4.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "apollo-server-express": "^3.1.2",
+    "axios": "^0.21.1",
+    "optimism": "^0.13.0",
     "graphql": "^15.5.1",
+    "graphql-tag": "^2.12.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "subscriptions-transport-ws": "^0.9.18"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,18 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jainam7/giphy-project-app.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jainam7/giphy-project-app/issues"
-  },
-  "homepage": "https://github.com/jainam7/giphy-project-app#readme"
+  }
 }
