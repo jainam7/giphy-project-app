@@ -1,7 +1,7 @@
 import { gql } from "apollo-server-express";
 
 const typeDefs = gql`
-  type OriginalGiphyData {
+  type searchOriginalData {
     url: String
     width: String
     height: String
@@ -9,7 +9,7 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
-  OriginalGiphyData: {
+  searchOriginalData: {
     url: (original) => original.url,
     width: (original) => original.width,
     height: (original) => original.height,
