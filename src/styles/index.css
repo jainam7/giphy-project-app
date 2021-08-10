@@ -1,38 +1,22 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Verdana, Geneva, sans-serif;
+.search{
+  display: flex;
+  margin: 10px auto;
+  flex-direction: row;
+  width: 48%;
+  padding: 14px 0;
 }
 
-input {
-  max-width: 500px;
+.float{
+  float: right;
+  padding: 14px 0;
 }
 
-.gray {
-  color: #828282;
+.toggle{
+  height: 20px;
+  width: 50px !important;
+  margin: 4px 5px;
 }
 
-.orange {
-  background-color: #ff6600;
-}
-
-
-
-.f11 {
-  font-size: 11px;
-}
-
-
-.button {
-  font-family: monospace;
-  font-size: 10pt;
-  color: black;
-  background-color: buttonface;
-  text-align: center;
-  padding: 2px 6px 3px;
-  border-width: 2px;
-  border-style: outset;
-  border-color: buttonface;
-  cursor: pointer;
-  max-width: 250px;
+.toggleText{
+  margin: 0 15px 0 0;
 }

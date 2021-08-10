@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import Loader from "../Component/Loader";
 
 const Home = (props) => {
-  const giphyResults = props.trendingGifsData?.searchGiphy
-    ? props.trendingGifsData?.searchGiphy
-    : props.trendingGifsData?.tradingGiphy;
+  console.log(props.trendingGifsData);
   const renderGifs = () => {
     if (props.loading) {
       return <Loader />;
     }
     if (props.trendingGifsData) {
-      return giphyResults?.map((el) => {
+      return props.trendingGifsData?.map((el) => {
         return (
           <div key={el.id} className="gif">
-            <img src={el.images.original.url} alt={el.images.title} />
+            <img
+              src={el.images.original.url}
+              alt={el.images.title}
+              width="250px"
+            />
           </div>
         );
       });
@@ -22,8 +24,10 @@ const Home = (props) => {
 
   return (
     <>
-      <div className="container gifs">{renderGifs()}</div>
-      {console.log("giphyResults", giphyResults)}
+      <div>
+        {props.rerenderError}
+        <div className="container gifs">{renderGifs()}</div>
+      </div>
     </>
   );
 };
