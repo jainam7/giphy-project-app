@@ -1,20 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import ResizeObserver from "react-resize-observer";
 import Loader from "../Component/Loader";
 
 const Home = (props) => {
   console.log(props.trendingGifsData);
+  const [width, setWidth] = useState(window.innerWidth);
   const renderGifs = () => {
     if (props.loading) {
       return <Loader />;
     }
     if (props.trendingGifsData) {
-      return props.trendingGifsData?.map((el) => {
+      return props.trendingGifsData?.map((gif) => {
         return (
-          <div key={el.id} className="gif">
+          <div key={gif.id} className="gif row">
             <img
-              src={el.images.original.url}
-              alt={el.images.title}
-              width="250px"
+              className="imgWidth"
+              src={gif.images.original.url}
+              alt={gif.images.title}
+              width={width}
+            />
+            <ResizeObserver
+              onResize={({ width }) => {
+                setWidth(width);
+              }}
             />
           </div>
         );
