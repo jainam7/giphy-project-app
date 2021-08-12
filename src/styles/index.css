@@ -1,4 +1,4 @@
-.search{
+.search {
   display: flex;
   margin: 10px auto;
   flex-direction: row;
@@ -6,22 +6,82 @@
   padding: 14px 0;
 }
 
-.float{
+.float {
   float: right;
   padding: 14px 0;
 }
 
-.toggle{
+.toggle {
   height: 20px;
   width: 50px !important;
   margin: 4px 5px;
 }
 
-.toggleText{
+.toggleText {
   margin: 0 15px 0 0;
 }
 
-.imgWidth{
+.imgWidth {
   width: 250px;
   margin: 2px 2px;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.img-overlay {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.img-overlay:before {
+  content: " ";
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.button-container {
+  display: inline-block;
+  position: relative;
+}
+
+.button-container span {
+  position: absolute;
+  right: 8em;
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
 }

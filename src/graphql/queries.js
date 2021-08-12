@@ -8,6 +8,10 @@ export const GET_ALL_TRANDING_GIPHY = gql`
         original {
           url
         }
+        originalStill {
+          url
+          width
+        }
       }
     }
   }
@@ -25,6 +29,10 @@ export const SEARCH_BY_GIPHY = gql`
           url
           width
           height
+        }
+        originalStill {
+          url
+          width
         }
       }
     }
