@@ -1,14 +1,14 @@
 import { gql } from "apollo-server-express";
 
 const typeDefs = gql`
-  type imagesData {
-    original: OriginalGiphyData
-    originalStill: OriginalStillGiphyData
+  type Image {
+    original: ImagesFields
+    originalStill: ImagesFields
   }
 `;
 
 const resolvers = {
-  imagesData: {
+  Image: {
     original: (images) => images.original,
     originalStill: (images) => images.original_still,
   },

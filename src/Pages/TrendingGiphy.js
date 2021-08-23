@@ -4,6 +4,8 @@ import debounce from "lodash/debounce";
 import { GET_ALL_TRANDING_GIPHY, SEARCH_BY_GIPHY } from "../GraphQL/Queries";
 import Home from "./Home";
 import Loader from "../Component/Loader";
+import Search from "./Search";
+import "../styles/index.css";
 
 const TrendingGiphy = () => {
   const {
@@ -98,6 +100,7 @@ const TrendingGiphy = () => {
             {toggle ? "Changed To Light Theme" : "Changed To Dark Theme "}
           </label>
         </div>
+        {/* <Search setResult={setResult} /> */}
         <div className="search">
           <input
             onChange={(e) => handleSearchChange(e)}

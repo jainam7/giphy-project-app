@@ -1,25 +1,22 @@
 import merge from "lodash/merge";
 import flatten from "lodash/flatten";
-import imagesData from "./imagesData";
-import OriginalGiphyData from "./OriginalGiphyData";
-import OriginalStillGiphyData from "./OriginalStillGiphyData";
+import Image from "./Image";
+import ImagesFields from "./ImagesFields";
 import tradingGiphy from "./tradingGiphy";
-import tradingGiphyData from "./tradingGiphyData";
+import Giphy from "./Giphy";
 
 const typeDefs = flatten([
   tradingGiphy.typeDefs,
-  tradingGiphyData.typeDefs,
-  imagesData.typeDefs,
-  OriginalGiphyData.typeDefs,
-  OriginalStillGiphyData.typeDefs,
+  Giphy.typeDefs,
+  Image.typeDefs,
+  ImagesFields.typeDefs,
 ]);
 
 const resolvers = merge(
   tradingGiphy.resolvers,
-  tradingGiphyData.resolvers,
-  imagesData.resolvers,
-  OriginalGiphyData.resolvers,
-  OriginalStillGiphyData.resolvers
+  Giphy.resolvers,
+  Image.resolvers,
+  ImagesFields.resolvers
 );
 
 const graphqlTypeDefsResolversOfTrending = { typeDefs, resolvers };

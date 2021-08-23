@@ -1,7 +1,7 @@
 import { gql } from "apollo-server-express";
 
 const typeDefs = gql`
-  type tradingGiphyData {
+  type Giphy {
     id: ID
     type: String
     url: String
@@ -9,12 +9,12 @@ const typeDefs = gql`
     source: String
     title: String
     rating: String
-    images: imagesData
+    images: Image
   }
 `;
 
 const resolvers = {
-  tradingGiphyData: {
+  Giphy: {
     id: (tranding) => tranding.id,
     type: (tranding) => tranding.type,
     url: (tranding) => tranding.url,
