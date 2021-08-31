@@ -4,25 +4,6 @@ import Loader from "../Component/Loader";
 
 const Home = (props) => {
   const [playGifs, pauseGifs] = useState(true);
-  const renderIcon = (uniqueId, uniqueIdStill) => {
-    if (playGifs) {
-      return (
-        <div>
-          <i
-            className={
-              playGifs ? "bi bi-play-circle-fill" : "bi bi-pause-circle-fill"
-            }
-            key={uniqueId}
-          ></i>
-        </div>
-      );
-    }
-    return (
-      <div>
-        <i className="bi bi-pause-circle-fill" key={uniqueIdStill}></i>
-      </div>
-    );
-  };
   const renderGifsImage = (gif, uniqueId, uniqueIdStill, index) => {
     // console.log("gifssss", gif);
     if (playGifs) {
@@ -48,7 +29,6 @@ const Home = (props) => {
     if (props.loading) {
       return <Loader />;
     }
-
     if (props.trendingGifsData) {
       return props.trendingGifsData?.map((gif, index) => {
         const today = new Date();
@@ -67,18 +47,7 @@ const Home = (props) => {
                   }
                   key={index}
                 ></i>
-                {/* {renderIcon(uniqueId, uniqueIdStill)} */}
               </span>
-              {/* <img
-                className="imgWidth"
-                key={uniqueId}
-                src={
-                  playGifs
-                    ? gif.images.original.url
-                    : gif.images.originalStill.url
-                }
-                alt={gif.images.title}
-              /> */}
               {renderGifsImage(gif, uniqueId, uniqueIdStill, index)}
             </div>
           </>
@@ -89,7 +58,6 @@ const Home = (props) => {
 
   return (
     <>
-      {props.loading ? <Loader /> : null}
       <div>
         {props.renderError}
         <div className="container gifs">{renderGifs()}</div>

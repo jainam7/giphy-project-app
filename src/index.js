@@ -4,14 +4,14 @@ import { ApolloProvider } from "@apollo/client";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import apolloClient from "./apolloClient";
-import TrendingGiphy from "./Pages/TrendingGiphy";
+import Giphy from "./Pages/Giphy";
 import "./styles/App.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={apolloClient}>
       <BrowserRouter>
-        <TrendingGiphy />
+        <Giphy />
       </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>,
