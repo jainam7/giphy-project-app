@@ -20,7 +20,6 @@ const Search = ({ props }) => {
     if (loading) {
       <Loader />;
     }
-    console.log("propsss", props);
     props?.setResult(data?.searchGiphy);
   };
 

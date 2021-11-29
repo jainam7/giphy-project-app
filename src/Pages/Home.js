@@ -1,11 +1,9 @@
-import { random } from "lodash";
 import React, { useState } from "react";
 import Loader from "../Component/Loader";
 
 const Home = (props) => {
   const [playGifs, pauseGifs] = useState(true);
   const renderGifsImage = (gif, uniqueId, uniqueIdStill, index) => {
-    // console.log("gifssss", gif);
     if (playGifs) {
       return (
         <img
@@ -34,7 +32,7 @@ const Home = (props) => {
         const today = new Date();
         const uniqueId = gif.id + Math.random(1000);
         const uniqueIdStill = gif.id + today.getMilliseconds();
-        console.log("props.trendingGifsData", props.trendingGifsData);
+        // console.log("props.trendingGifsData", props.trendingGifsData);
         return (
           <>
             <div className="gif row">

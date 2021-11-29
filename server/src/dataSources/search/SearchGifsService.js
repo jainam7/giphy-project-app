@@ -7,16 +7,18 @@ import {
 } from "../../Constant";
 
 const SearchGifsService = () => {
-  const getAllSearchedGifs = async ({ searchKey }) => {
+  const getAllSearchedGifs = async ({ searchKey, offSet }) => {
+    console.log("offsetsssssss", offSet);
     const response = await axios(`${BASE_URL}/v1/gifs/search`, {
       params: {
         api_key: GIPHY_API_KEY,
         q: searchKey,
         limit: GIPHY_LIMIT,
-        offset: GIPHY_OFFSET,
+        offset: offSet,
       },
     });
 
+    console.log("lengthsssssss", response.data.data.length);
     return await Promise.all(response.data.data);
   };
   return {

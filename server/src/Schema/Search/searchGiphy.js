@@ -2,7 +2,7 @@ import { gql } from "apollo-server-express";
 
 const typeDefs = gql`
   extend type Query {
-    searchGiphy(val: String): [Giphy]
+    searchGiphy(val: String, offSet: String): [Giphy]
   }
 `;
 const resolvers = {
@@ -10,6 +10,7 @@ const resolvers = {
     searchGiphy: async (parent, args, context) =>
       context.dataSources.searchGifsService.getAllSearchedGifs({
         searchKey: args.val,
+        offSet: args.offSet,
       }),
   },
 };

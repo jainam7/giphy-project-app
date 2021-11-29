@@ -18,8 +18,8 @@ export const GET_ALL_TRANDING_GIPHY = gql`
 `;
 
 export const SEARCH_BY_GIPHY = gql`
-  query searchGiphy($val: String) {
-    searchGiphy(val: $val) {
+  query searchGiphy($val: String, $offSet: String) {
+    searchGiphy(val: $val, offSet: $offSet) {
       id
       url
       source

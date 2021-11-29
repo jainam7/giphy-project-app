@@ -2,11 +2,11 @@
   "name": "giphy-project",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "build": "babel src -d dist",
     "start": "npm run build && node dist",
-    "restart": "rimraf dist && npm run start",
-    "dev": "npm run start"
+    "dev": "npm run dev"
   },
   "dependencies": {
     "apollo-datasource-rest": "^3.1.1",
